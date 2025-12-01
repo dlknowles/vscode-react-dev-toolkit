@@ -1,0 +1,67 @@
+{
+  "name": "react-dev-toolkit",
+  "displayName": "React Dev Toolkit",
+  "description": "Generate React components and hooks with simple VS Code commands.",
+  "version": "0.0.1",
+  "publisher": "LeeKnowles",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:reactDevToolkit.createComponent",
+    "onCommand:reactDevToolkit.createHook",
+    "onCommand:reactDevToolkit.createContext"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "reactDevToolkit.createComponent",
+        "title": "React Dev Toolkit: Create Component"
+      },
+      {
+        "command": "reactDevToolkit.createHook",
+        "title": "React Dev Toolkit: Create Hook"
+      },
+      {
+        "command": "reactDevToolkit.createContext",
+        "title": "React Dev Toolkit: Create Context"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "React Dev Toolkit",
+      "properties": {
+        "reactDevToolkit.componentsDir": {
+          "type": "string",
+          "default": "src/components",
+          "description": "Relative path (from workspace root) where new React component files will be created."
+        },
+        "reactDevToolkit.hooksDir": {
+          "type": "string",
+          "default": "src/hooks",
+          "description": "Relative path (from workspace root) where new React hook files will be created."
+        },
+        "reactDevToolkit.contextDir": {
+          "type": "string",
+          "default": "src/context",
+          "description": "Relative path (from workspace root) where new React context files will be created."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "echo \"No tests yet\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.0.0"
+  }
+}
