@@ -1,0 +1,1 @@
+# vscode-react-generator-plugin
