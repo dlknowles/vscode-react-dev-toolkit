@@ -4,6 +4,7 @@
   "description": "Generate React components and hooks with simple VS Code commands.",
   "version": "0.0.1",
   "publisher": "LeeKnowles",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.80.0"
   },
